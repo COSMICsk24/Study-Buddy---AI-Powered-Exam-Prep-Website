@@ -1,74 +1,73 @@
-# 🧠 Study Buddy – AI-Powered Exam Preparation Platform
+# 🧠 Study Buddy – AI-Powered Exam Prep Website
 
-![Next.js](https://img.shields.io/badge/Frontend-Next.js-blue?logo=next.js)
+![Next.js](https://img.shields.io/badge/Framework-Next.js-black?logo=nextdotjs)
+![Tailwind](https://img.shields.io/badge/Style-TailwindCSS-06B6D4?logo=tailwindcss)
+![shadcn/ui](https://img.shields.io/badge/UI-shadcn%2Fui-orange)
 ![Clerk](https://img.shields.io/badge/Auth-Clerk-blueviolet?logo=clerk)
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue?logo=postgresql)
 ![Stripe](https://img.shields.io/badge/Payments-Stripe-635bff?logo=stripe)
-![Status](https://img.shields.io/badge/Live-Online-success)
+![Database](https://img.shields.io/badge/Database-Neon-blue?logo=postgresql)
+![AI](https://img.shields.io/badge/AI-Gemini%20AI-red?logo=google)
+![Jobs](https://img.shields.io/badge/Background-Inngest-purple)
+![Deploy](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
+![Status](https://img.shields.io/badge/Status-Live-success)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-**Study Buddy** is a modern **AI-powered exam preparation web application** designed to streamline studying for students. Built with the **Next.js** framework and integrated with **Generative AI**, this platform allows users to generate personalized study material, flashcards, and quizzes—all through a sleek, responsive interface.
-
----
-
-## 🔗 Live Website
-
-🌐 **Check it out here:** [https://yourdomain.com](https://yourdomain.com)  
-*(Replace this with your actual live site URL if different)*
+**Study Buddy** is an **AI-powered exam preparation platform** that allows students to generate intelligent study materials like notes, flashcards, and quizzes based on their topics or syllabus using **Google Gemini AI**. It features secure user authentication, a clean responsive UI, and background task handling — all built with modern full-stack tools.
 
 ---
 
-## 📦 Tech Stack
+## 🌐 Live Website
 
-| Layer            | Technologies Used                                |
-|------------------|--------------------------------------------------|
-| Frontend         | Next.js, React, Tailwind CSS                     |
-| Backend          | Next.js API Routes, Drizzle ORM                  |
-| Database         | PostgreSQL (via Neon)                            |
-| Authentication   | Clerk (Next.js SDK)                              |
-| AI Integration   | Google Generative AI API                         |
-| UI Components    | Radix UI, Lucide Icons, Embla Carousel           |
-| State & Styling  | Next Themes, Tailwind Merge, Class Variance Auth|
-| Payments         | Stripe                                           |
-| Deployment       | Vercel                                           |
+🔗 [https://studybuddy-ai.vercel.app](https://studybuddy-ai.vercel.app)
 
 ---
 
-## ✨ Features
+## 🚀 Tech Stack
 
-### 👨‍🎓 Users
-- 🔐 Clerk-based Authentication & Authorization
-- ✍️ Generate Study Notes using Generative AI
-- 🧠 Create and Review Flashcards
-- 📊 Visual Progress Tracker
-- 🎯 Quiz Generator based on Topics
-- 🌗 Dark/Light Mode Support
-
-### 💳 Subscriptions (with Stripe)
-- ⚡ Freemium Model with Premium Access
-- 💰 Stripe Integration for Subscription Payments
-
-### 🛠 Admin/Dev Features
-- 🧱 Database Management with Drizzle ORM
-- 📄 Environment Config via `.env`
-- 🧪 Development Ready Scripts (`dev`, `build`, `start`)
+| Layer              | Technology                                                             |
+|--------------------|------------------------------------------------------------------------|
+| **Frontend**        | Next.js, React 18, Tailwind CSS, shadcn/ui                            |
+| **Backend**         | Next.js API Routes, Node.js, Drizzle ORM                              |
+| **Database**        | Neon (PostgreSQL)                                                     |
+| **Authentication**  | Clerk                                                                 |
+| **AI Integration**  | Gemini AI via `@google/generative-ai`                                 |
+| **Payments**        | Stripe                                                                |
+| **Background Jobs** | Inngest                                                               |
+| **Deployment**      | Vercel                                                                |
 
 ---
 
-## 🖼️ UI/UX Highlights
+## ✨ Key Features
 
-- Smooth onboarding flow with Clerk
-- Clean dashboard with status cards and progress bars
-- Flashcard flipping animation (`react-card-flip`)
-- Toast Notifications with `sonner`
-- Loading indicators with `react-spinners`
+### 🧠 AI Study Tools
+- Generate study notes using Gemini AI
+- Create flashcards and quizzes instantly
+- Store and access previous generations
+
+### 👤 User System
+- Auth with Clerk (Email, OAuth)
+- Role-based logic (Free vs Premium)
+- User profile with subscription management
+
+### 💳 Monetization
+- Stripe integration for subscription
+- Secure checkout and webhook handling
+
+### ⚙️ Developer Experience
+- Background jobs with **Inngest**
+- Fully responsive & accessible UI (shadcn/ui)
+- Styled using **Tailwind CSS**
+- Hosted on **Vercel**
 
 ---
+###Set these in .env.local:
+-CLERK_SECRET_KEY=
+-CLERK_PUBLISHABLE_KEY=
+-NEXT_PUBLIC_CLERK_FRONTEND_API=
 
-## 📈 Future Roadmap
-
-- 🧪 AI-based Mock Tests
-- 📤 PDF Upload for Smart Summary Generation
-- 📬 Email Notifications
-- 📲 Mobile App Support (via React Native / Expo)
-
----
+-OPENAI_API_KEY=          # Or Gemini AI key
+-GOOGLE_API_KEY=          # For Gemini
+-DATABASE_URL=            # Neon Postgres connection string
+-STRIPE_SECRET_KEY=
+-NEXT_PUBLIC_STRIPE_KEY=
+-INGGEST_EVENT_KEY=
