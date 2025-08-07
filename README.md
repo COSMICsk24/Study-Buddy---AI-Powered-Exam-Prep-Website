@@ -18,7 +18,7 @@
 
 ## 🌐 Live Website
 
-🔗 [Live Website](https://study-buddy-ai-powered-exam-prep-website-3azblxazv.vercel.app/) 
+🔗 [Click Here](https://study-buddy-ai-powered-exam-prep-website-3azblxazv.vercel.app/) 
 
 ---
 
