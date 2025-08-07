@@ -61,13 +61,13 @@
 
 ---
 ###Set these in .env.local:
--CLERK_SECRET_KEY=
--CLERK_PUBLISHABLE_KEY=
--NEXT_PUBLIC_CLERK_FRONTEND_API=
+- CLERK_SECRET_KEY=
+- CLERK_PUBLISHABLE_KEY=
+- NEXT_PUBLIC_CLERK_FRONTEND_API=
 
--OPENAI_API_KEY=          # Or Gemini AI key
--GOOGLE_API_KEY=          # For Gemini
--DATABASE_URL=            # Neon Postgres connection string
--STRIPE_SECRET_KEY=
--NEXT_PUBLIC_STRIPE_KEY=
--INGGEST_EVENT_KEY=
+- OPENAI_API_KEY=          # Or Gemini AI key
+- GOOGLE_API_KEY=          # For Gemini
+- DATABASE_URL=            # Neon Postgres connection string
+- STRIPE_SECRET_KEY=
+- NEXT_PUBLIC_STRIPE_KEY=
+- INGGEST_EVENT_KEY=
