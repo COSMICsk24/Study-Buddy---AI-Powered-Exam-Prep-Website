@@ -17,9 +17,6 @@ function ClientDashboard() {
         <Link href="/dashboard/upgrade" className="w-1/2 ml-2">
           <Button className="w-full">Upgrade</Button>
         </Link>
-        <Link href="/dashboard" className="w-1/2 ml-2">
-          <Button className="w-full">Profile</Button>
-        </Link>
       </div>
       <CourseList />
     </div>
