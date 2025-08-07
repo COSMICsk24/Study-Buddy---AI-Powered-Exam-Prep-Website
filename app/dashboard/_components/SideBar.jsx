@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useContext } from "react";
+import { UserButton } from "@clerk/nextjs";
 
 function SideBar() {
   const MenuList = [
@@ -23,7 +24,7 @@ function SideBar() {
     {
       name: "Profile",
       icon: UserCircle,
-      path: "/dashboard/profile",
+      path: <UserButton />,
     },
   ];
 

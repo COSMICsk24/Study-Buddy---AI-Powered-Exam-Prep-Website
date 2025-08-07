@@ -102,7 +102,7 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className="text-center py-4 md:py-6 text-gray-600 text-sm md:text-base">
-        Made with ❤️ by Aditya Kumar Singh
+        Made with ❤️ by Shaswat Kanungo
       </footer>
     </div>
   );
