@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import WelcomeBanner from "./WelcomeBanner";
 import CourseList from "./CourseList";
