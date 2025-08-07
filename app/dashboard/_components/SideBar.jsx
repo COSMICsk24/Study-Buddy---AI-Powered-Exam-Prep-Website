@@ -1,14 +1,12 @@
 "use client";
-
 import { CourseCountContext } from "@/app/_context/CourseCountContext";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { LayoutDashboard, Shield } from "lucide-react"; // Removed UserCircle
+import { LayoutDashboard, Shield, UserCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useContext } from "react";
-import { UserButton } from "@clerk/nextjs"; // ✅ Import UserButton
 
 function SideBar() {
   const MenuList = [
@@ -22,7 +20,11 @@ function SideBar() {
       icon: Shield,
       path: "/dashboard/upgrade",
     },
-    // Removed the Profile menu item
+    {
+      name: "Profile",
+      icon: UserCircle,
+      path: "/dashboard/profile",
+    },
   ];
 
   const { totalCourse, setTotalCourse } = useContext(CourseCountContext);
@@ -30,19 +32,15 @@ function SideBar() {
 
   return (
     <div className="h-screen shadow-md p-5">
-      {/* Logo and App Name */}
       <div className="flex gap-2 items-center">
         <Image src={"/logo.svg"} alt="logo" width={40} height={40} />
         <h2 className="font-bold text-2xl">Study Buddy</h2>
       </div>
 
-      {/* Create Button */}
       <div className="mt-10">
         <Link href="/create" className="w-full">
           <Button className="w-full">+&nbsp;Create New</Button>
         </Link>
-
-        {/* Sidebar Menu Items */}
         <div className="mt-5">
           {MenuList.map((menu, index) => (
             <Link href={menu.path} key={index} className="block">
@@ -56,16 +54,8 @@ function SideBar() {
               </div>
             </Link>
           ))}
-
-          {/* ✅ User Button as last item (replacing Profile) */}
-          <div className="flex gap-5 items-center p-3 hover:bg-slate-200 rounded-lg cursor-pointer mt-3">
-            <UserButton afterSignOutUrl="/" />
-            <span>Account</span>
-          </div>
         </div>
       </div>
-
-      {/* Credit Usage Section */}
       <div className="border p-3 bg-slate-100 rounded-lg absolute bottom-10 w-[86%]">
         <h2 className="text-lg mb-3">Available Credits: {5 - totalCourse}</h2>
         <Progress value={(totalCourse / 5) * 100} />
