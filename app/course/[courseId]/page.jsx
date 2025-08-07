@@ -1,7 +1,7 @@
 "use client";
 import DashboardHeader from "@/app/dashboard/_components/DashboardHeader";
 import axios from "axios";
-import { useParams } from "";
+import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import CourseIntroCard from "./components/CourseIntroCard";
 import StudyMaterialSection from "./components/StudyMaterialSection";
